@@ -1,0 +1,94 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- 顶部 -->
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/background"
+            android:gravity="center"
+            android:text="便签"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"
+            android:textStyle="italic" />
+
+        <!-- 底部 -->
+        <Button
+            android:id="@+id/btn_new"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/btn_press"
+            android:gravity="center"
+            android:text="新建便签"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+
+        <!-- 主体 -->
+        <ListView
+            android:id="@+id/list_note"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/btn_new"
+            android:layout_below="@id/tv_title"
+            android:layout_margin="10dp"
+            android:divider="#FFFFFF"
+            android:dividerHeight="10dp" />
+
+    </RelativeLayout>
+
+    <!-- 隐藏部分 -->
+    <RelativeLayout
+        android:id="@+id/layout_hide"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/background">
+
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="取消"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/btn_choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="全选"
+                android:textSize="20sp" />
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_delete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/background"
+            android:text="删除"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+</FrameLayout>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- 顶部 -->
+        <RelativeLayout
+            android:id="@+id/layout_top"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/background"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <!-- 日期 -->
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_margin="10dp"
+                android:background="@drawable/border"
+                android:text="09/03 08:00"
+                android:textSize="15sp"
+                android:textStyle="italic" />
+
+            <!-- 录音 -->
+            <ImageButton
+                android:id="@+id/img_voice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/ic_voice_search" />
+
+            <!-- 照片 -->
+            <ImageButton
+                android:id="@+id/img_gallery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/img_voice"
+                android:src="@drawable/ic_menu_gallery" />
+
+            <!-- 绘图 -->
+            <ImageButton
+                android:id="@+id/img_drawing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/img_gallery"
+                android:src="@drawable/ic_menu_edit" />
+
+        </RelativeLayout>
+
+        <!-- 底部 -->
+        <Button
+            android:id="@+id/btn_record"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/btn_press"
+            android:gravity="center"
+            android:text="按住说话"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:visibility="gone" />
+
+        <!-- 主体 -->
+        <net.xuwenhui.note.biz.MyEditText
+            android:id="@+id/edit_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/btn_record"
+            android:layout_below="@id/layout_top"
+            android:layout_margin="10dp"
+            android:autoLink="all"
+            android:background="@null"
+            android:enabled="true"
+            android:gravity="top"
+            android:inputType="textMultiLine"
+            android:scrollbars="vertical" />
+
+    </RelativeLayout>
+
+</FrameLayout>

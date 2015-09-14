@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/border">
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="7"
+        android:singleLine="true"
+        android:text="hello everyone"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:text="08/26"
+        android:textSize="20sp" />
+
+    <CheckBox
+        android:id="@+id/check_item"
+        android:layout_width="0dp"
+        android:layout_height="20sp"
+        android:layout_weight="1"
+        android:checked="false"
+        android:visibility="gone" />
+
+</LinearLayout>
